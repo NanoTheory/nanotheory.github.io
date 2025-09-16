@@ -110,7 +110,50 @@
 							<br/>
 							<h2>News</h2>
 						</header>
-						<a class="twitter-timeline" href="https://twitter.com/Nanotheory1?ref_src=twsrc%5Etfw">Tweets by Nanotheory1</a>
+						<div id="twitter-feed" style="max-width: 500px; margin: 0 auto;">
+							<!-- Loading indicator -->
+							<div id="twitter-loading" style="text-align: center; padding: 40px; background: #f8f8f8; border-radius: 8px; margin-bottom: 20px;">
+								<p style="margin-bottom: 15px;">Loading latest news...</p>
+								<div style="width: 30px; height: 30px; border: 3px solid #ddd; border-top: 3px solid #1DA1F2; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto;"></div>
+							</div>
+
+							<!-- Twitter timeline embed -->
+							<div id="x-slot" style="display: none;">
+								<a class="twitter-timeline"
+								   href="https://twitter.com/Nanotheory1"
+								   data-width="500"
+								   data-height="500"
+								   data-tweet-limit="5">
+									Posts by @Nanotheory1
+								</a>
+							</div>
+
+							<!-- Fallback content when embed fails -->
+							<div id="twitter-fallback" style="display: none; background: #f8f8f8; border-radius: 8px; padding: 30px; text-align: center;">
+								<h4 style="margin-bottom: 20px; color: #333;">Stay Updated with Our Latest News</h4>
+								<p style="margin-bottom: 25px; color: #666;">
+									The live feed is temporarily unavailable. Visit our social media for the latest updates:
+								</p>
+								<a href="https://twitter.com/Nanotheory1"
+								   target="_blank"
+								   rel="noopener"
+								   style="background: #1DA1F2; color: white; padding: 12px 24px; border-radius: 25px; text-decoration: none; display: inline-block; font-weight: bold; margin-bottom: 20px;">
+									Follow @Nanotheory1 on X →
+								</a>
+								<div style="margin-top: 25px; padding-top: 20px; border-top: 1px solid #ddd;">
+									<p style="font-size: 0.9em; color: #777; margin: 0;">
+										Recent highlights are also available in the <a href="#press" style="color: #1DA1F2;">Press section</a> above.
+									</p>
+								</div>
+							</div>
+						</div>
+
+						<style>
+							@keyframes spin {
+								0% { transform: rotate(0deg); }
+								100% { transform: rotate(360deg); }
+							}
+						</style>
 					</section>
 				</section>
 			</div>
@@ -1073,9 +1116,9 @@
 						<!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
 						<input type='hidden' name='redirect_to' value='https://nanotheory.github.io/thankyou.html'/>
 						<label for="email">Your email</label>
-						<input type='email' name='email'/>
+						<input type='email' id='email' name='email' autocomplete='email' required/>
 						<label for="content">Your message</label>
-						<textarea name="content"></textarea>
+						<textarea id='content' name="content" autocomplete='off' required></textarea>
 
 						<input type='submit' value='submit'/>
 					</form>
@@ -1108,6 +1151,86 @@
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 			<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+			<script>
+				// Twitter timeline management with fallback
+				document.addEventListener('DOMContentLoaded', function() {
+					const loadingDiv = document.getElementById('twitter-loading');
+					const timelineDiv = document.getElementById('x-slot');
+					const fallbackDiv = document.getElementById('twitter-fallback');
+					let timelineLoaded = false;
+					let loadAttempted = false;
+
+					// Function to show fallback
+					function showFallback() {
+						if (loadingDiv) loadingDiv.style.display = 'none';
+						if (timelineDiv) timelineDiv.style.display = 'none';
+						if (fallbackDiv) fallbackDiv.style.display = 'block';
+						console.log('Twitter timeline showing fallback due to loading issues');
+					}
+
+					// Function to show timeline
+					function showTimeline() {
+						if (loadingDiv) loadingDiv.style.display = 'none';
+						if (fallbackDiv) fallbackDiv.style.display = 'none';
+						if (timelineDiv) {
+							timelineDiv.style.display = 'block';
+							timelineLoaded = true;
+						}
+					}
+
+					// Single attempt to load Twitter widgets
+					function attemptTwitterLoad() {
+						if (loadAttempted) return; // Prevent multiple attempts
+						loadAttempted = true;
+
+						if (window.twttr && window.twttr.widgets) {
+							// Show timeline container
+							showTimeline();
+
+							// Single load attempt with timeout handling
+							const loadPromise = window.twttr.widgets.load(document.getElementById('x-slot'));
+
+							if (loadPromise && loadPromise.then) {
+								loadPromise.then(function() {
+									// Timeline loaded successfully
+									timelineLoaded = true;
+								}).catch(function(error) {
+									// Only show fallback if timeline truly failed to load
+									setTimeout(function() {
+										if (!timelineLoaded) showFallback();
+									}, 2000);
+								});
+							}
+						}
+					}
+
+					// Wait for Twitter script to be ready
+					function waitForTwitter() {
+						if (window.twttr && window.twttr.widgets) {
+							attemptTwitterLoad();
+						} else {
+							setTimeout(waitForTwitter, 100);
+						}
+					}
+
+					// Start loading process
+					setTimeout(waitForTwitter, 500);
+
+					// Final fallback after 8 seconds
+					setTimeout(function() {
+						if (!timelineLoaded) {
+							showFallback();
+						}
+					}, 8000);
+
+					// Listen for successful widget rendering
+					window.addEventListener('message', function(event) {
+						if (event.origin === 'https://platform.twitter.com' && event.data && event.data.type === 'twitterwidget') {
+							timelineLoaded = true;
+						}
+					});
+				});
+			</script>
 
 		</body>
 	</html>
