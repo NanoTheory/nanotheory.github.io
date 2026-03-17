@@ -1,19 +1,37 @@
 [
   {
+    "name": "Dr. Margaret Berrens",
+    "role": "Postdoctoral Fellow at LLNL",
+    "image": "images/maggie-berrens.jpg",
+    "url": "https://scholar.google.com/citations?user=E711ky0AAAAJ&hl=en"
+  },
+  {
+    "name": "Dr. Zekun Chen",
+    "role": "Postdoctoral Fellow at LBNL",
+    "image": "images/maggie-berrens.jpg",
+    "url": "https://scholar.google.com/citations?user=E711ky0AAAAJ&hl=en"
+  },
+  {
+    "name": "Dr. Nathaniel Troup",
+    "role": "PhD in Chemical Engineering",
+    "image": "images/maggie-berrens.jpg",
+    "url": "https://scholar.google.com/citations?user=E711ky0AAAAJ&hl=en"
+  },
+  {
     "name": "Dr. Carlos Polanco",
-    "role": "Postdoctoral Associate",
+    "role": "Engineer at KLA",
     "image": "images/Carlos_Polanco_2.jpg",
     "url": "https://scholar.google.com/citations?user=E711ky0AAAAJ&hl=en"
   },
   {
     "name": "Dr. Anna Wannenmacher",
-    "role": "Ph.D. in Chemistry",
+    "role": "Postdoctoral Fellow at UC Berkeley",
     "image": "images/anna-wannenmacher.jpg",
     "url": "https://profiles.lbl.gov/116150-anna-wannenmacher"
   },
   {
     "name": "Dr. Riccardo Dettori",
-    "role": "Postdoctoral Associate",
+    "role": "Assistant Professor at Univ. of Cagliari",
     "image": "images/riccardo-dettori.png",
     "url": "https://scholar.google.com/citations?user=4TB85csAAAAJ&hl=sv"
   },
@@ -25,19 +43,19 @@
   },
   {
     "name": "Dr. Shunda Chen",
-    "role": "Postdoctoral Associate",
+    "role": "Researcher at GWU",
     "image": "images/shunda-chen.jpg",
     "url": "https://scholar.google.com/citations?user=0oqfZ50AAAAJ&hl=en"
   },
   {
     "name": "Dr. Fernanda Bononi",
-    "role": "Ph.D. in Chemistry",
+    "role": "Lecturer at Cascadia College",
     "image": "images/fernanda.jpg",
     "url": "https://scholar.google.com/citations?user=dSV5u6oAAAAJ&hl=en"
   },
   {
     "name": "Miqdad Raza",
-    "role": "Masters in Materials Engineering",
+    "role": "Masters in Materials Science and Engineering",
     "image": "images/mickey.jpg",
     "url": "#"
   }
