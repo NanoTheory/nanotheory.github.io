@@ -6,24 +6,6 @@
     "url": "http://chemistry.ucdavis.edu/faculty/department_faculty/davide_donadio.html"
   },
   {
-    "name": "Dr. Frank Cerasoli",
-    "role": "Postdoctoral Researcher",
-    "image": "images/frank-cerasoli.jpg",
-    "url": "#"
-  },
-  {
-    "name": "Zekun Chen",
-    "role": "Graduate Student Researcher",
-    "image": "images/zekun-chen.jpg",
-    "url": "https://scholar.google.com/citations?hl=en&user=sKv2WVcAAAAJ"
-  },
-  {
-    "name": "Nathaniel Troup",
-    "role": "Graduate Student Researcher",
-    "image": "images/nate-troup.jpg",
-    "url": "#"
-  },
-  {
     "name": "Nicholas Lundgren",
     "role": "Graduate Student Researcher",
     "image": "images/nicholas-lundgren.png",
@@ -36,12 +18,6 @@
     "url": "#"
   },
   {
-    "name": "Maggie Berrens",
-    "role": "Graduate Student Researcher",
-    "image": "images/maggie-berrens.jpg",
-    "url": "https://www.linkedin.com/in/margaret-berrens/"
-  },
-  {
     "name": "Tonybill Chan",
     "role": "Graduate Student Researcher",
     "image": "images/tonybill-chan.jpg",
@@ -51,6 +27,12 @@
     "name": "Dylan Folkner",
     "role": "Graduate Student Researcher",
     "image": "images/dylan-folkner.jpg",
+    "url": "#"
+  },
+  {
+    "name": "Nicholas Martinez",
+    "role": "Graduate Student Researcher",
+    "image": "#",
     "url": "#"
   },
   {
