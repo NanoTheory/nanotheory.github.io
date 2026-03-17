@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Dr. Carlos Polanco",
+    "role": "Postdoctoral Associate",
+    "image": "images/Carlos_Polanco_2.jpg",
+    "url": "https://scholar.google.com/citations?user=E711ky0AAAAJ&hl=en"
+  },
+  {
+    "name": "Dr. Anna Wannenmacher",
+    "role": "Ph.D. in Chemistry",
+    "image": "images/anna-wannenmacher.jpg",
+    "url": "https://profiles.lbl.gov/116150-anna-wannenmacher"
+  },
+  {
+    "name": "Dr. Riccardo Dettori",
+    "role": "Postdoctoral Associate",
+    "image": "images/riccardo-dettori.png",
+    "url": "https://scholar.google.com/citations?user=4TB85csAAAAJ&hl=sv"
+  },
+  {
+    "name": "Dr. Charlie Sievers",
+    "role": "Ph.D. in Chemistry",
+    "image": "images/charlie-sievers.jpg",
+    "url": "https://charlessievers.github.io"
+  },
+  {
+    "name": "Dr. Shunda Chen",
+    "role": "Postdoctoral Associate",
+    "image": "images/shunda-chen.jpg",
+    "url": "https://scholar.google.com/citations?user=0oqfZ50AAAAJ&hl=en"
+  },
+  {
+    "name": "Dr. Fernanda Bononi",
+    "role": "Ph.D. in Chemistry",
+    "image": "images/fernanda.jpg",
+    "url": "https://scholar.google.com/citations?user=dSV5u6oAAAAJ&hl=en"
+  },
+  {
+    "name": "Miqdad Raza",
+    "role": "Masters in Materials Engineering",
+    "image": "images/mickey.jpg",
+    "url": "#"
+  }
+]

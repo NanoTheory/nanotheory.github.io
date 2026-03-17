@@ -1,0 +1,57 @@
+[
+  {
+    "title": "Environmental Chemistry at Ice Surfaces",
+    "description": "We study the physicochemical properties of the surface of ice, and its effect as a natural catalyst of reactions that impact the chemistry of the atmosphere.",
+    "image": "images/research-ice.jpg",
+    "refs": [
+      {"url": "https://doi.org/10.1021/jacsau.4c00957"},
+      {"url": "https://doi.org/10.1063/5.0262438"}
+    ]
+  },
+  {
+    "title": "Heat Transport",
+    "description": "We are developing new theory and algorithms to model thermal transport in complex systems with applications to energy conversion and electronics.",
+    "image": "images/thermal-transport.jpg",
+    "refs": [
+      {"url": "http://aip.scitation.org/doi/10.1063/5.0020443"},
+      {"url": "https://doi.org/10.1063/5.0238723"}
+    ]
+  },
+  {
+    "title": "Crystallization",
+    "description": "We study crystal nucleation and growth of materials at both atmospheric and extreme conditions.",
+    "image": "images/research-crystallization.png",
+    "refs": [
+      {"url": "https://www.nature.com/articles/s41467-025-61674-5"},
+      {"url": "https://doi.org/10.1063/5.0287608"}
+    ]
+  },
+  {
+    "title": "Materials Discovery",
+    "description": "We combine computational prediction with experimental synthesis to discover thermoelectric and clathrate materials with targeted transport properties, from hidden clathrate phases to polyanionic frameworks with ultralow thermal conductivity.",
+    "image": "images/research-materials-1.png",
+    "refs": [
+      {"url": "https://doi.org/10.1021/jacs.2c12435"},
+      {"url": "https://doi.org/10.1021/acsami.4c06694"}
+    ]
+  },
+  {
+    "title": "Hydrogen-Bonded Liquids",
+    "description": "We apply polarizable and ML potentials to resolve fundamental questions about water and ice, including direct evidence for liquid\u2013liquid phase coexistence in supercooled water and the role of nuclear quantum effects on electronic structure and out-of-equilibrium dynamics.",
+    "image": "images/research-liquids-1.png",
+    "refs": [
+      {"url": "https://www.nature.com/articles/s41586-021-03793-9"},
+      {"url": "https://www.pnas.org/doi/10.1073/pnas.2526573123"}
+    ]
+  },
+  {
+    "title": "Method Development",
+    "description": "We develop scalable simulation methods that integrate AI in molecular modeling to bridge quantum accuracy and simulation time and length scales. Our workflows span neuroevolution ML potentials, enhanced sampling, and ML force fields for materials design and optimization.",
+    "image": "images/research-methods.png",
+    "refs": [
+      {"url": "https://doi.org/10.1063/5.0213132"},
+      {"url": "https://doi.org/10.1063/5.0238723"},
+      {"url": "https://doi.org/10.1021/acsnano.5c11887"}
+    ]
+  }
+]

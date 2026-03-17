@@ -1,0 +1,27 @@
+---
+layout: base.njk
+pageTitle: Nanotheory Alumni
+permalink: /alumni.html
+---
+
+<!-- Main -->
+<section id="people" class="wrapper style3 special">
+	<div class="inner">
+		<header class="major">
+			<h2>Nanotheory Alumni</h2>
+		</header>
+		<section class="spotlights">
+			{% for person in alumni %}
+			<section>
+				<a href="{{ person.url }}">
+					<span class="image">
+						<img style="width:12em; border-radius: 50%;" src="{{ person.image }}" alt=""/>
+					</span>
+					<h4>{{ person.name }}</h4>
+					<p>{{ person.role }}</p>
+				</a>
+			</section>
+			{% endfor %}
+		</section>
+	</div>
+</section>

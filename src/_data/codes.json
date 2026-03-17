@@ -1,0 +1,20 @@
+[
+  {
+    "name": "kaldo",
+    "description": "An open-source Python package for anharmonic lattice dynamics calculations of thermal transport in crystalline and amorphous solids.",
+    "url": "https://github.com/nanotheorygroup/kaldo",
+    "icon": "images/kaldo-logo.png"
+  },
+  {
+    "name": "kaldo-examples",
+    "description": "Official examples and tutorials for the kaldo package.",
+    "url": "https://github.com/nanotheorygroup/kaldo-examples",
+    "icon": "images/kaldo-examples-icon.svg"
+  },
+  {
+    "name": "MC-SPS",
+    "description": "Monte Carlo Site Permutation Search - a toolkit for optimizing atomic arrangements on crystal structures using machine learning energy models.",
+    "url": "https://github.com/nanotheorygroup/MC-SPS",
+    "icon": "images/mc-sps-icon.svg"
+  }
+]

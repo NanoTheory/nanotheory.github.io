@@ -1,0 +1,24 @@
+<!-- Header -->
+<header id="header">
+	<a href="#menu">Menu</a>
+</header>
+
+<!-- Nav -->
+<nav id="menu">
+	<ul class="links">
+		{% if isHome %}
+		<li><a href="#press">Press</a></li>
+		<li><a href="#research">Research</a></li>
+		<li><a href="#people">People</a></li>
+		<li><a href="#publications">Publications</a></li>
+		<li><a href="#contact">Contact us</a></li>
+		<li><a href="alumni.html">Alumni</a></li>
+		{% else %}
+		<li><a href="index.html#research">Research</a></li>
+		<li><a href="index.html#people">People</a></li>
+		<li><a href="index.html#publications">Publications</a></li>
+		<li><a href="index.html#contact">Contact us</a></li>
+		<li><a href="alumni.html">Alumni</a></li>
+		{% endif %}
+	</ul>
+</nav>

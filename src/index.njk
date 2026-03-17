@@ -1,0 +1,174 @@
+---
+layout: base.njk
+bodyClass: landing
+isHome: true
+permalink: /index.html
+---
+
+<!-- Banner -->
+<section id="banner">
+	<header class="major">
+		<span class="icon style3"><img style="width:1.6em;" src="images/logo_small.png" alt=""/></span>
+		<h1>Nanotheory</h1>
+		<p>Davide Donadio's group at University of California - Davis</p>
+	</header>
+	<ul class="actions">
+		<li>
+			<a href="#research" class="button scrolly">Learn More</a>
+		</li>
+	</ul>
+</section>
+
+<!-- Press & Codes -->
+<section id="press" class="wrapper style1 special">
+	<div class="inner">
+		<section class="spotlights">
+			<section>
+				<header>
+					<br/>
+					<h2>Press</h2>
+				</header>
+				<ul class="alt">
+					{% for item in press %}
+					<li>
+						<b>{{ item.title }}</b>
+						<a href="{{ item.url }}">{{ item.source }}</a>
+						{{ item.date }}
+					</li>
+					{% endfor %}
+				</ul>
+			</section>
+			<section>
+				<header>
+					<br/>
+					<h2>Our Codes</h2>
+				</header>
+				{% for code in codes %}
+				<div class="code-card">
+					<a href="{{ code.url }}">
+						<img src="{{ code.icon }}" alt="{{ code.name }}" class="code-icon"/>
+						<h4>{{ code.name }}</h4>
+					</a>
+					<p>{{ code.description }}</p>
+				</div>
+				{% endfor %}
+			</section>
+		</section>
+	</div>
+</section>
+
+<!-- Research -->
+<section id="research" class="wrapper style1 special">
+	<div class="inner">
+		<header class="major alt style2">
+			<h2>Research</h2>
+			<p style="padding-left:1.5em;padding-right:1.5em;">We perform molecular simulations of nonequilibrium processes, which range from pump-probe spectroscopy to thermal energy transport and conversion in complex systems. We combine traditional all-atom molecular dynamics, electronic structure theory, and rare events techniques, toward a comprehensive theoretical approach able to cover several time and length scales.</p>
+		</header>
+		<section class="spotlights">
+			{% for topic in research %}
+			<section>
+				<span class="image"><img src="{{ topic.image }}" alt=""/></span>
+				<h4>{{ topic.title }}</h4>
+				<p>{{ topic.description }}</p>
+				<ul class="actions">
+					Refs:
+					{% for ref in topic.refs %}
+					<i><a href="{{ ref.url }}">{{ ref.url }}</a></i>
+					{% if not loop.last %}-{% endif %}
+					{% endfor %}
+				</ul>
+			</section>
+			{% endfor %}
+		</section>
+	</div>
+</section>
+
+<!-- People -->
+<section id="people" class="wrapper style3 special">
+	<div class="inner">
+		<header class="major">
+			<h2>People</h2>
+		</header>
+		<div class="people-grid">
+			{% for person in people %}
+			<div class="person{% if loop.first %} person-leader{% endif %}">
+				<a href="{{ person.url }}">
+					<img src="{{ person.image }}" alt="{{ person.name }}"/>
+					<h4>{{ person.name }}</h4>
+					<p>{{ person.role }}</p>
+				</a>
+			</div>
+			{% endfor %}
+		</div>
+		<section>
+			<div class="inner">
+				<h4>Undergraduate Researchers</h4>
+			</div>
+			<div class="table-wrapper">
+				<table>
+					<tbody>
+						<tr>
+							{% for ug in undergrads %}
+							<td>{{ ug }}</td>
+							{% endfor %}
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<section>
+			<div class="inner">
+				<h4><a href="alumni.html" class="button">Alumni</a></h4>
+			</div>
+		</section>
+	</div>
+</section>
+
+<!-- Publications -->
+<section id="publications" class="wrapper style1 special">
+	<div class="inner">
+		<header class="major">
+			<h2>Publications</h2>
+			<p>Most recent publications</p>
+		</header>
+		<ul class="alt">
+			{% set grouped = collections.publications | groupByYear %}
+			{% for group in grouped %}
+			<h3>{{ group.year }}</h3>
+			{% for pub in group.pubs %}
+			<li>
+				<p style="padding-left:2em;padding-right:2em;font-size:1.05em;">
+					{{ pub.data.authors }}.
+					{% if pub.data.url and pub.data.url != "#" %}<a href="{{ pub.data.url }}">{{ pub.data.title }}</a>{% else %}{{ pub.data.title }}{% endif %}.
+					<em>{{ pub.data.journal }}</em>{% if pub.data.volume %}, {{ pub.data.volume }}{% endif %} ({{ pub.data.year }}).
+				</p>
+			</li>
+			{% endfor %}
+			{% endfor %}
+		</ul>
+
+		<ul class="actions">
+			<li>
+				<a href="{{ site.googleScholar }}" class="button">More Publications</a>
+			</li>
+		</ul>
+	</div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="wrapper style4 special">
+	<div class="inner">
+		<header class="major">
+			<h2>Contact us</h2>
+		</header>
+		<p>For more information, reach out to us at <a href="mailto:{{ site.contactEmail }}">{{ site.contactEmail }}</a>. If you want to stop by, we are located in the Department of Chemistry. University of California Davis, One Shields Ave. Davis, 95616, CA.</p>
+	</div>
+</section>
+
+<!-- Openings -->
+<section id="openings" class="wrapper style1 special alt">
+	<div class="inner">
+		<h4>Current Openings</h4>
+		<p>Our group is multidisciplinary with members and alumni from Physics, Applied Physics, Physical, Inorganic, and Organic Chemistry, Electrical Engineering, Chemical Engineering, Materials Science, and Bioengineering. The group atmosphere is very friendly, cooperative, and motivated. Our group is accepting applications, but we are currently impacted.</p>
+	</div>
+</section>

@@ -1,0 +1,11 @@
+{
+  "name": "nanotheory-website",
+  "version": "1.0.0",
+  "description": "Nanotheory Group website - UC Davis",
+  "scripts": {
+    "build": "eleventy && cp _site/index.html _site/alumni.html _site/thankyou.html ."
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
