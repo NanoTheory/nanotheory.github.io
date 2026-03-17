@@ -29,7 +29,7 @@
   {
     "title": "Materials Discovery",
     "description": "We combine computational prediction with experimental synthesis to discover thermoelectric and clathrate materials with targeted transport properties, from hidden clathrate phases to polyanionic frameworks with ultralow thermal conductivity.",
-    "image": "images/research-materials-1.png",
+    "image": "images/MaterialsDesign.png",
     "refs": [
       {"url": "https://doi.org/10.1021/jacs.2c12435"},
       {"url": "https://doi.org/10.1021/acsami.4c06694"}
