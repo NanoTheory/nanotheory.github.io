@@ -1,4 +1,5 @@
 module.exports = function(eleventyConfig) {
+  eleventyConfig.setFreezeReservedData(false);
   // Don't use .gitignore for ignoring files (it would skip src/publications)
   eleventyConfig.setUseGitIgnore(false);
 

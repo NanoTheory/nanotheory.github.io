@@ -6,6 +6,6 @@
     "build": "eleventy && cp _site/index.html _site/alumni.html _site/thankyou.html ."
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^3.1.2"
   }
 }

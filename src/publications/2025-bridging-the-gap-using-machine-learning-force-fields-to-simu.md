@@ -3,7 +3,6 @@ title: "Bridging the Gap: Using Machine Learning Force Fields to Simulate Gold B
 authors: "W Bro-Jørgensen, JM Hamill, D Donadio, GC Solomon"
 journal: "ACS Nano"
 volume: "19"
-page: "39735"
 year: 2025
 url: "#"
 ---
