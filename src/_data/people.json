@@ -6,6 +6,12 @@
     "url": "http://chemistry.ucdavis.edu/faculty/department_faculty/davide_donadio.html"
   },
   {
+    "name": "Dr. Xiaochen Jin",
+    "role": "Postdoctoral Researcher",
+    "image": "images/xiaochen-jin.png",
+    "url": "#"
+  },
+  {
     "name": "Nicholas Lundgren",
     "role": "Graduate Student Researcher",
     "image": "images/nicholas-lundgren.png",
@@ -32,7 +38,7 @@
   {
     "name": "Nicholas Martinez",
     "role": "Graduate Student Researcher",
-    "image": "#",
+    "image": "images//favicon.png",
     "url": "#"
   },
   {
